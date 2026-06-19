@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #050505;
+  --text-main: #FFFFFF;
+  --text-muted: #888888;
+  --accent-cyan: #00F0FF;
+  --accent-lime: #39FF14;
+  --accent-pink: #FF0055;
+  --border-muted: #222222;
+}
+
+/* ============ BASE ============ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-muted);
+  font-family: var(--font-inter), sans-serif;
+  cursor: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar but keep scrolling */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ============ 3D PERSPECTIVE ============ */
+main, section {
+  perspective: 2000px;
+}
+
+/* ============ TYPOGRAPHY ============ */
+.font-archivo {
+  font-family: var(--font-archivo), sans-serif;
+  text-transform: uppercase;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* ============ NEON COLOR UTILITIES ============ */
+/* Cyan #00F0FF */
+.text-cyan { color: #00F0FF !important; }
+.bg-cyan { background-color: #00F0FF !important; }
+.border-cyan { border-color: #00F0FF !important; }
+
+/* Lime #39FF14 */
+.text-lime { color: #39FF14 !important; }
+.bg-lime { background-color: #39FF14 !important; }
+.border-lime { border-color: #39FF14 !important; }
+
+/* Pink #FF0055 */
+.text-pink { color: #FF0055 !important; }
+.bg-pink { background-color: #FF0055 !important; }
+.border-pink { border-color: #FF0055 !important; }
+
+/* ============ NOISE TEXTURE ============ */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ HOVER GLOW BORDERS ============ */
+.glow-border-cyan {
+  border: 1px solid #1a1a1a;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.glow-border-cyan:hover {
+  border-color: #00F0FF;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+.glow-border-lime {
+  border: 1px solid #1a1a1a;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.glow-border-lime:hover {
+  border-color: #39FF14;
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.15);
+}
+
+/* ============ CURSOR ============ */
+.cursor-none { cursor: auto !important; }
+.hover-target { cursor: pointer !important; }
+.custom-cursor { display: none; }
+.hero-meta > div:nth-child(2) { display: none; }
+
+@media (pointer: fine) {
+  .custom-cursor { display: block; }
+}
+
+.footer-star {
+  animation: footer-star-twinkle 1.9s ease-in-out infinite;
+}
+
+@keyframes footer-star-twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+/* ============ SELECTION ============ */
+::selection {
+  background-color: #00F0FF;
+  color: #000;
+}
+
+/* ============ MODAL BACKDROP ============ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 99999;
+}
