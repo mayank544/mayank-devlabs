@@ -5,6 +5,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import IntroAnimationWrapper from "@/components/IntroAnimationWrapper";
+import StructuredData from "@/components/StructuredData";
 
 const archivo = Archivo_Black({
   weight: "400",
@@ -127,15 +128,17 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} ${spaceMono.variable} ${inter.variable}`}
     >
-      <body className="bg-[#050505] text-[#888888] overflow-x-hidden cursor-none antialiased">
-        <CustomCursor />
-        <IntroAnimationWrapper />
+     <body className="bg-[#050505] text-[#888888] overflow-x-hidden cursor-none antialiased">
+  <StructuredData />
 
-        <SmoothScroll>
-          <div className="noise-overlay pointer-events-none fixed inset-0 z-[99] opacity-[0.025]" />
-          {children}
-        </SmoothScroll>
-      </body>
+  <CustomCursor />
+  <IntroAnimationWrapper />
+
+  <SmoothScroll>
+    <div className="noise-overlay pointer-events-none fixed inset-0 z-[99] opacity-[0.025]" />
+    {children}
+  </SmoothScroll>
+</body>
     </html>
   );
 }
