@@ -32,14 +32,14 @@ export const terminalLines = [
 
 export const projects = [
   {
-    name: "ShopSarkar",
+    name: "Clone Crash Lab",
     category: "MERN",
-    type: "MERN E-commerce",
+    type: "Clone testing web lab",
     description:
-      "A full-stack e-commerce experience with product catalog, cart flow, responsive UI, and scalable architecture.",
-    stack: ["React", "Redux", "Node.js", "Express", "MongoDB", "JWT"],
-    live: "https://shopsarkar.netlify.app",
-    github: "https://github.com/mayank544",
+      "A full stack web lab build to test , rebiuild, and anylyze  clone style project with authentication dashboard page , API routes , Database models , and a clean devloper - focused workflow.",
+    stack: ["next.js", "React", "Node.js", "API Routes", "MongoDB", "Authentication"],
+    live: "https://clonecrushlab.netlify.app/",
+    github: "https://github.com/mayank544/clonecrush-lab",
     featured: true,
   },
   {

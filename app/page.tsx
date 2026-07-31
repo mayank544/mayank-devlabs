@@ -96,10 +96,10 @@ export default function Home() {
 
   const projectData = [
     { 
-      cat: "01 / WEB APP · E-COMMERCE", 
-      title: "SHOPSARKAR", 
-      desc: "A full-stack e-commerce experience with product catalog, cart flow, and scalable architecture.", 
-      tech: ["React", "Node", "MongoDB"], 
+      cat: "01 / WEB APP · Clone testing website ", 
+      title: " Clone Crash Lab  ", 
+      desc: " A Full Stack web lab build to test , rebuild , and anylze clone style projects with authentication dashboard page , API Routes , database models , and a clean devloper-focused workflow", 
+      tech: ["React", "Node", "Mongo DB Authentication", "API Routes"], 
       link: "https://shopsarkar.netlify.app",
       image: "/projects/shop-sarkar.jpg",
       color: "linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(0, 80, 255, 0.25) 100%)",
